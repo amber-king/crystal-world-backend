@@ -11,11 +11,14 @@ const {
 // GET All crystals
 // /crystals
 crystals.get("/", async (req, res) => {
-  const allCrystals = await getAllCrystals();
-  if (allCrystals[0]) {
-    res.status(200).json(allCrystals);
-  } else {
-    res.status(500).json({ error: "server errors" });
+  try {
+    const allCrystals = await getAllCrystals();
+    if (allCrystals[0]) {
+      res.status(200).json(allCrystals);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Server error" });
   }
 });
 
@@ -57,7 +60,7 @@ crystals.put("/:id", async (req, res) => {
 
 // DELETE one crystal
 // /crystals/:id
-crystalss.delete("/:id", async (req, res) => {
+crystals.delete("/:id", async (req, res) => {
   const { id } = req.params;
   const deletedCrystal = await deleteOneCrystal(id);
   if (deletedCrystal) {

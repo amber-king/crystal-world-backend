@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
   res.json("Crystal World 💎");
 });
 
-// mount of controller to keep track of crystal index page changes
+// Crystals Routes - mount of controller to keep track of crystal index page changes
 app.use("/crystals", crystalsControllers)
 
 

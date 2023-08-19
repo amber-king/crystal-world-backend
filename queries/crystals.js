@@ -4,8 +4,10 @@ const db = require("../db/dbConfig.js");
 const getAllCrystals = async () => {
   try {
     const allCrystals = await db.any("SELECT * FROM crystals");
+    // console.log("SQL Query Result:", allCrystals);
     return allCrystals;
   } catch (error) {
+    // console.error("Query Error:", error);
     return { error };
   }
 };
