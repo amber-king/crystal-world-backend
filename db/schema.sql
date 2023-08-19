@@ -24,6 +24,16 @@ CREATE TABLE hardness_options (
   rating NUMERIC
 );
 
+ALTER TABLE crystals
+ADD FOREIGN KEY (luster_id) REFERENCES luster_options(id);
+
+ALTER TABLE hardness_options
+ADD CONSTRAINT unique_rating UNIQUE (rating);
+
+
+ALTER TABLE crystals
+ADD FOREIGN KEY (hardness) REFERENCES hardness_options(rating);
+
 
 
 
