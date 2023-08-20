@@ -10,6 +10,7 @@ CREATE DATABASE crystal_world;
   name TEXT NOT NULL,
   transparency TEXT NOT NULL,
   luster_id INT,
+  luster_name TEXT NOT NULL,
   hardness NUMERIC,
   color TEXT NOT NULL
 
@@ -33,6 +34,11 @@ ADD CONSTRAINT unique_rating UNIQUE (rating);
 
 ALTER TABLE crystals
 ADD FOREIGN KEY (hardness) REFERENCES hardness_options(rating);
+
+UPDATE crystals AS c
+SET luster_name = lo.option_name
+FROM luster_options AS lo
+WHERE c.luster_id = lo.id;
 
 
 

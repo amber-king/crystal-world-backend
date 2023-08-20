@@ -9,21 +9,44 @@
 -- VALUES
 --   ()
 INSERT INTO
-  crystals (name, transparency, luster_id, hardness, color)
+  crystals (
+    name,
+    transparency,
+    luster_id,
+    luster_name,
+    hardness,
+    color
+  )
 VALUES
-  ('Pyrite', 'Opaque', 3, 6, 'Brassy yellow'),
+  (
+    'Pyrite',
+    'Opaque',
+    3,
+    'Metallic',
+    6,
+    'Brassy yellow'
+  ),
   (
     'Quartz',
     'Transparent',
     1,
+    'Vitreous',
     7,
     'Colorless or various'
   ),
-  ('Amber', 'Translucent', 7, 2, 'Yellow to brown'),
+  (
+    'Amber',
+    'Translucent',
+    7,
+    'Silky',
+    2,
+    'Yellow to brown'
+  ),
   (
     'Talc',
     'Opaque',
     5,
+    'Resinous',
     1,
     'White, pale green, gray'
   ),
@@ -31,14 +54,23 @@ VALUES
     'Nepheline',
     'Translucent',
     6,
+    'Dull',
     5,
     'White, gray, green, blue'
   ),
-  ('Diamond', 'Transparent', 9, 10, 'Colorless'),
+  (
+    'Diamond',
+    'Transparent',
+    9,
+    'Waxy',
+    10,
+    'Colorless'
+  ),
   (
     'Gypsum',
     'Transparent',
     2,
+    'Pearly',
     2,
     'Colorless, white, gray, brown'
   ),
@@ -46,10 +78,18 @@ VALUES
     'Apatite',
     'Transparent',
     2,
+    'Pearly',
     5,
     'Blue, green, yellow, pink'
   ),
-  ('Limonite', 'Opaque', 4, 5, 'Yellow, brown');
+  (
+    'Limonite',
+    'Opaque',
+    4,
+    'Greasy',
+    5,
+    'Yellow, brown'
+  );
 
 INSERT INTO
   luster_options (option_name)
