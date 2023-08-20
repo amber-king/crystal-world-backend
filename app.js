@@ -1,6 +1,6 @@
 // Dependicies
 const express = require("express");
-const cors - require("cors")
+const cors = require("cors")
 const crystalsControllers = require("./controllers/crystalsControllers");
 
 // Configuration
