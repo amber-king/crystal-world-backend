@@ -8,6 +8,8 @@ const app = express();
 
 // Middleware
 app.use(cors())
+
+
 app.use(express.json());
 
 
@@ -15,9 +17,19 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json("Crystal World 💎");
 });
-
+app.get("/luster_options", async (req, res) => {
+  try {
+    const lusterOptions = await db.any("SELECT * FROM luster_options");
+    res.json({ lusterOptions });
+  } catch (error) {
+    console.error("Error fetching luster options:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
 // Crystals Routes - mount of controller to keep track of crystal index page changes
 app.use("/crystals", crystalsControllers)
+
+
 
 
 module.exports = app;
