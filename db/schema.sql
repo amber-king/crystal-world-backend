@@ -1,45 +1,30 @@
+-- Create the crystal_world database
 DROP DATABASE IF EXISTS crystal_world;
 
 CREATE DATABASE crystal_world;
 
-\c crystal_world;
+\ c crystal_world;
 
-
-  CREATE TABLE crystals (
-  id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
-  transparency TEXT NOT NULL,
-  luster_id INT,
-  luster_name TEXT NOT NULL,
-  hardness NUMERIC,
-  color TEXT NOT NULL
-
-);
+-- Create luster_options table
 CREATE TABLE luster_options (
   id SERIAL PRIMARY KEY,
   option_name TEXT NOT NULL
 );
 
+-- Create hardness_options table
 CREATE TABLE hardness_options (
   id SERIAL PRIMARY KEY,
-  rating NUMERIC
+  rating NUMERIC,
+  CONSTRAINT unique_rating UNIQUE (rating)
 );
 
-ALTER TABLE crystals
-ADD FOREIGN KEY (luster_id) REFERENCES luster_options(id);
-
-ALTER TABLE hardness_options
-ADD CONSTRAINT unique_rating UNIQUE (rating);
-
-
-ALTER TABLE crystals
-ADD FOREIGN KEY (hardness) REFERENCES hardness_options(rating);
-
-UPDATE crystals AS c
-SET luster_name = lo.option_name
-FROM luster_options AS lo
-WHERE c.luster_id = lo.id;
-
-
-
-
+-- Create crystals table
+CREATE TABLE crystals (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  transparency TEXT NOT NULL,
+  hardness NUMERIC,
+  color TEXT NOT NULL,
+  luster_name TEXT NOT NULL,
+  FOREIGN KEY (hardness) REFERENCES hardness_options(rating)
+);

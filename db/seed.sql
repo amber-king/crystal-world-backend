@@ -1,96 +1,4 @@
-\ c crystal_world -- INSERT INTO
---   crystals (
---     name,
---     transparency,
---     luster_id INT,
---     hardness NUMERIC,
---     color
---   )
--- VALUES
---   ()
-INSERT INTO
-  crystals (
-    name,
-    transparency,
-    luster_id,
-    luster_name,
-    hardness,
-    color
-  )
-VALUES
-  (
-    'Pyrite',
-    'Opaque',
-    3,
-    'Metallic',
-    6,
-    'Brassy yellow'
-  ),
-  (
-    'Quartz',
-    'Transparent',
-    1,
-    'Vitreous',
-    7,
-    'Colorless or various'
-  ),
-  (
-    'Amber',
-    'Translucent',
-    7,
-    'Silky',
-    2,
-    'Yellow to brown'
-  ),
-  (
-    'Talc',
-    'Opaque',
-    5,
-    'Resinous',
-    1,
-    'White, pale green, gray'
-  ),
-  (
-    'Nepheline',
-    'Translucent',
-    6,
-    'Dull',
-    5,
-    'White, gray, green, blue'
-  ),
-  (
-    'Diamond',
-    'Transparent',
-    9,
-    'Waxy',
-    10,
-    'Colorless'
-  ),
-  (
-    'Gypsum',
-    'Transparent',
-    2,
-    'Pearly',
-    2,
-    'Colorless, white, gray, brown'
-  ),
-  (
-    'Apatite',
-    'Transparent',
-    2,
-    'Pearly',
-    5,
-    'Blue, green, yellow, pink'
-  ),
-  (
-    'Limonite',
-    'Opaque',
-    4,
-    'Greasy',
-    5,
-    'Yellow, brown'
-  );
-
+-- Insert data into luster_options table
 INSERT INTO
   luster_options (option_name)
 VALUES
@@ -104,6 +12,7 @@ VALUES
   ('Silky'),
   ('Resinous');
 
+-- Insert data into hardness_options table
 INSERT INTO
   hardness_options (rating)
 VALUES
@@ -117,3 +26,77 @@ VALUES
   (8),
   (9),
   (10);
+
+-- Insert data into crystals table
+INSERT INTO
+  crystals (
+    name,
+    transparency,
+    luster_name,
+    hardness,
+    color
+  )
+VALUES
+  (
+    'Pyrite',
+    'Opaque',
+    'Metallic',
+    6,
+    'Brassy yellow'
+  ),
+  (
+    'Quartz',
+    'Transparent',
+    'Vitreous',
+    7,
+    'Colorless or various'
+  ),
+  (
+    'Amber',
+    'Translucent',
+    'Silky',
+    2,
+    'Yellow to brown'
+  ),
+  (
+    'Talc',
+    'Opaque',
+    'Resinous',
+    1,
+    'White, pale green, gray'
+  ),
+  (
+    'Nepheline',
+    'Translucent',
+    'Dull',
+    5,
+    'White, gray, green, blue'
+  ),
+  (
+    'Diamond',
+    'Transparent',
+    'Waxy',
+    10,
+    'Colorless'
+  ),
+  (
+    'Gypsum',
+    'Transparent',
+    'Pearly',
+    2,
+    'Colorless, white, gray, brown'
+  ),
+  (
+    'Apatite',
+    'Transparent',
+    'Pearly',
+    5,
+    'Blue, green, yellow, pink'
+  ),
+  (
+    'Limonite',
+    'Opaque',
+    'Greasy',
+    5,
+    'Yellow, brown'
+  );
