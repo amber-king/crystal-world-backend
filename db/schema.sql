@@ -26,5 +26,6 @@ CREATE TABLE crystals (
   hardness NUMERIC,
   color TEXT NOT NULL,
   luster_name TEXT NOT NULL,
+  healing_features TEXT NOT NULL,
   FOREIGN KEY (hardness) REFERENCES hardness_options(rating)
 );

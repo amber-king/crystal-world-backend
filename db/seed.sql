@@ -32,71 +32,81 @@ INSERT INTO
   crystals (
     name,
     transparency,
-    luster_name,
     hardness,
-    color
+    color,
+    luster_name,
+    healing_features
   )
 VALUES
   (
     'Pyrite',
     'Opaque',
-    'Metallic',
     6,
-    'Brassy yellow'
+    'Brassy yellow',
+    'Metallic',
+    'Promotes confidence and self-worth. Enhances mental clarity and focus. Attracts abundance and prosperity. Shields against negative energy.'
   ),
   (
     'Quartz',
     'Transparent',
-    'Vitreous',
     7,
-    'Colorless or various'
+    'Colorless or various',
+    'Vitreous',
+    'Amplifies energy and intentions. Enhances spiritual growth and meditation. Balances and aligns chakras. Facilitates communication with higher realms.'
   ),
   (
     'Amber',
     'Translucent',
-    'Silky',
     2,
-    'Yellow to brown'
+    'Yellow to brown',
+    'Silky',
+    'Purifies and cleanses energy. Offers protection from negative influences. Aids in emotional healing and self-expression. Enhances creativity and vitality.'
   ),
   (
     'Talc',
     'Opaque',
-    'Resinous',
     1,
-    'White, pale green, gray'
+    'White, pale green, gray',
+    'Resinous',
+    'Promotes peaceful and calming energy. Supports emotional healing and self-acceptance. Aids in meditation and relaxation. Encourages sensitivity and empathy.'
   ),
   (
     'Nepheline',
     'Translucent',
-    'Dull',
     5,
-    'White, gray, green, blue'
+    'White, gray, green, blue',
+    'Dull',
+    'Enhances psychic abilities and intuition. Balances and aligns energy centers. Facilitates communication and self-expression. Supports dream work and journeying.'
   ),
   (
     'Diamond',
     'Transparent',
-    'Waxy',
     10,
-    'Colorless'
+    'Colorless',
+    'Waxy',
+    'Amplifies positive energy and intentions. Enhances inner strength and courage. Promotes clarity of thought and purity of intention. Balances and aligns all chakras.'
   ),
   (
     'Gypsum',
     'Transparent',
-    'Pearly',
     2,
-    'Colorless, white, gray, brown'
+    'Colorless, white, gray, brown',
+    'Pearly',
+    'Promotes emotional healing and tranquility. Aids in meditation and spiritual insight. Enhances communication and intuition. Clears energy blockages and negativity.'
   ),
   (
     'Apatite',
     'Transparent',
-    'Pearly',
     5,
-    'Blue, green, yellow, pink'
+    'Blue, green, yellow, pink',
+    'Pearly',
+    'Stimulates personal growth and self-expression. Enhances creativity and motivation. Supports communication and self-confidence. Aids in spiritual development and meditation.'
   ),
   (
     'Limonite',
     'Opaque',
-    'Greasy',
     5,
-    'Yellow, brown'
+    'Yellow, brown',
+    'Greasy',
+    'Promotes grounding and stability. Aids in releasing old patterns and attachments. Enhances strength and endurance. Supports manifestation and abundance.'
   );
