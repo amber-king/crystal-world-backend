@@ -1,12 +1,13 @@
 # The Crystal World 💎
 <hr>
-## What is the crystal world? 🤔
+
 
 ## Frontend Links ⤵️
 - [Frontend GitHub Repo](https://github.com/crystaluniverse/frontend) - A frontend for The Crystal World 🌐
 
 
 - [Netlify Frontend](https://main--love-thyself.netlify.app/) - Netlify Frontend deploy site
+
 
 This is the <b>backend</b> portion of The Crystal World application.
 
