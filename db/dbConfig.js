@@ -12,6 +12,12 @@ const cn = {
   user: process.env.PG_USER,
 };
 
+// const cn = {
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+// };
 const db = pgp(cn);
 
 // Export
