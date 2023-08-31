@@ -11,14 +11,17 @@ app.use(cors());
 
 app.use(express.json());
 
-// Crystals Routes - mount of controller to keep track of crystal index page changes
-app.use("/crystals", crystalsControllers);
-
 // Routes
 
 // home page route
 app.get("/", (req, res) => {
   res.json("Crystal World 💎");
+});
+// Crystals Routes - mount of controller to keep track of crystal index page changes
+app.use("/crystals", crystalsControllers);
+
+app.get("*", (req, res) => {
+  res.status(404).json("Page not found");
 });
 
 module.exports = app;
