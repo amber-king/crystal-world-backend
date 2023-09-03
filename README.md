@@ -6,7 +6,7 @@
 
 - [Frontend GitHub Repo](https://github.com/amber-king/crystal-world-frontend) - A frontend for The Crystal World 🌐
 
-- [Netlify Frontend](TBA) - Netlify Frontend deploy site
+- [Netlify Frontend](https://main--crystal-world.netlify.app/) - Netlify Frontend deploy site
 
 - [Backend Render Deploy Link](https://crystal-world-backend.onrender.com) <i>only homepage route - frontend holds most the functionality for data made via Postgressql</i>
 
